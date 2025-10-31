@@ -1,0 +1,6 @@
+/* src/pages/AdminDashboard.css */
+.admin-dashboard .cards {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,25 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  width: 220px;
+  background: #023e8a;
+  color: #fff;
+  position: fixed;
+  top: 60px; /* leave space for navbar */
+  left: 0;
+  bottom: 0;
+  padding: 18px 14px;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.06);
+}
+
+.sidebar-title { margin: 0 0 12px 0; font-size: 15px; font-weight: 700; }
+
+.sidebar nav ul { list-style: none; padding: 0; margin: 0; }
+.sidebar nav li { margin: 8px 0; }
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.sidebar nav a:hover { background: rgba(255,255,255,0.06); }

@@ -1,0 +1,12 @@
+/* src/components/DashboardCard.css */
+.dash-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 10px;
+  padding: 16px;
+  min-width: 160px;
+  box-shadow: 0 1px 4px rgba(2,6,23,0.06);
+  border: 1px solid #eef2f7;
+}
+
+.dash-card-title { color: #334155; font-size: 13px; margin-bottom: 6px; }
+.dash-card-value { font-weight: 700; font-size: 22px; color: #0f172a; }

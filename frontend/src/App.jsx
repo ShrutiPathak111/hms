@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import LoginAdmin from "./pages/LoginAdmin";
+import LoginDoctor from "./pages/LoginDoctor";
+import LoginPatient from "./pages/LoginPatient";
+import AdminDashboard from "./pages/AdminDashboard";
+import DoctorDashboard from "./pages/DoctorDashboard";
+import PatientDashboard from "./pages/PatientDashboard";
 
+const Home = () => (
+  <div className="login-container">
+    <div className="login-box">
+      <h2>Choose Role</h2>
+      <div style={{ display: "flex", gap: 8 }}>
+        <Link to="/login/admin"><button className="btn">Admin</button></Link>
+        <Link to="/login/doctor"><button className="btn">Doctor</button></Link>
+        <Link to="/login/patient"><button className="btn">Patient</button></Link>
+      </div>
+    </div>
+  </div>
+);
+
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login/admin" element={<LoginAdmin />} />
+        <Route path="/login/doctor" element={<LoginDoctor />} />
+        <Route path="/login/patient" element={<LoginPatient />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/doctor/dashboard" element={<DoctorDashboard />} />
+        <Route path="/patient/dashboard" element={<PatientDashboard />} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App

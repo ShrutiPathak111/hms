@@ -1,0 +1,4 @@
+/* src/pages/PatientDashboard.css */
+.patient-dashboard .cards { display:flex; gap:12px; margin-bottom:16px; }
+.patient-table { width:100%; border-collapse: collapse; background:#fff; margin-top:10px; }
+.patient-table th, .patient-table td { text-align:left; padding:10px; border-bottom:1px solid #eef2f7; }

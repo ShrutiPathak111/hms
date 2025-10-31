@@ -1,0 +1,4 @@
+/* src/pages/DoctorDashboard.css */
+.doctor-dashboard .cards { display:flex; gap:12px; margin-bottom:16px; }
+.appointments-table { width:100%; border-collapse: collapse; background:#fff; margin-top:10px; }
+.appointments-table th, .appointments-table td { text-align:left; padding:10px; border-bottom:1px solid #eef2f7; }
